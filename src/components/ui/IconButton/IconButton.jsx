@@ -1,11 +1,12 @@
 import React from 'react';
 
 import StyledIconButton from './IconButton.styles';
+import Icon from '../Icon/Icon';
 
-const IconButton = ({ icon, ...remainingProps }) => {
+const IconButton = ({ icon, color, ...remainingProps }) => {
   return (
     <StyledIconButton {...remainingProps}>
-      { icon }
+      <Icon icon={ icon } color={ color ? color : undefined }/>
     </StyledIconButton>
   );
 };
