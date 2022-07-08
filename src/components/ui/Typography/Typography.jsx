@@ -1,10 +1,14 @@
 import React from 'react';
 
-const Typography = ({ color, bold, children }) => {
+import StyledTypography from './Typography.styles';
+
+const Typography = ({ color, bold, ...remainingProps }) => {
   return (
-    <p>
-      { children }
-    </p>
+    <StyledTypography
+      color={ color }
+      bold={ bold }
+      { ...remainingProps }
+    />
   );
 };
 
