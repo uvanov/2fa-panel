@@ -12,7 +12,7 @@ const Navigation = () => {
       <StyledNavigation>
         {
           LINKS.map(link => (
-            <li>
+            <li key={link.label}>
               <Link href={ link.url }>
                 { link.label }
               </Link>
