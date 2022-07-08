@@ -1,13 +1,25 @@
 import React from 'react';
 
+import {
+  StyledNavigation,
+  Link
+} from './Navigation.styles';
+import { LINKS } from './Navigation.constants';
+
 const Navigation = () => {
   return (
     <nav>
-      <ul>
-        <li>
-          a
-        </li>
-      </ul>
+      <StyledNavigation>
+        {
+          LINKS.map(link => (
+            <li>
+              <Link href={ link.url }>
+                { link.label }
+              </Link>
+            </li>
+          ))
+        }
+      </StyledNavigation>
     </nav>
   );
 };
