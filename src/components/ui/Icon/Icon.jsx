@@ -2,9 +2,17 @@ import React from 'react';
 
 import StyledIcon from './Icon.styles';
 
-const Icon = ({ icon, color }) => {
+const Icon = (
+  {
+    icon,
+    color,
+    ...remainingProps
+  }) => {
   return (
-    <StyledIcon color={ color }>
+    <StyledIcon
+      color={ color }
+      { ...remainingProps }
+    >
       { icon }
     </StyledIcon>
   );
