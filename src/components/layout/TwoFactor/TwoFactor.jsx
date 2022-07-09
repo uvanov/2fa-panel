@@ -43,7 +43,6 @@ const TwoFactor = () => {
         <Authentication />
       </StepContext.Provider>
       <Divider/>
-
     </>
   );
 };
