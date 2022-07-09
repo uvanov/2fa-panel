@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 
 export default styled.p`
   color: ${ props => props.color };
+  font-size: 14px;
 
   ${ props => props.bold && css`
     font-weight: bold;
