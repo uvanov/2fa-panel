@@ -7,15 +7,20 @@ import {
   Alert
 } from '../../ui/ui';
 
+import {
+  ContentAlert,
+  StyledContent
+} from './Content.styles';
+
 const Content = () => {
   return (
-    <Flex
-      direction="column"
+    <StyledContent
+      direction='column'
       gap={ 20 }
     >
-      <Alert>
+      <ContentAlert>
         <Flex
-          direction="column"
+          direction='column'
           gap={ 30 }
         >
           <Typography>
@@ -28,9 +33,9 @@ const Content = () => {
             Подробнее о настройках этого подраздела <a href="#">читайте в нашей базе знаний</a>.
           </Typography>
         </Flex>
-      </Alert>
-      <TwoFactor/>
-    </Flex>
+      </ContentAlert>
+      <TwoFactor />
+    </StyledContent>
   );
 };
 
