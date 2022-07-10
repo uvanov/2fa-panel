@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import { useCode } from '../../../../hooks/useCode';
 import {
   Button,
   Flex,
@@ -13,16 +14,9 @@ import { QRCodeImage } from './Connecting.styles';
 import QRCodeSource from '../../../../assets/images/qr-code.png';
 
 const Connecting = () => {
-
-  const [codeStatus, setCodeStatus] = useState('');
+  const [codeStatus, onCodeChange] = useCode('234567');
   const { setStep } = useContext(StepContext);
 
-  const onCodeChange = (code) => {
-    if (code.length === 0) return setCodeStatus('');
-    if (code.length < 6) return setCodeStatus('pending');
-    if (code.length === 6 && code !== '234567') return setCodeStatus('invalid');
-    if (code.length === 6 && code === '234567') return setCodeStatus('valid');
-  };
 
   return (
     <Flex
