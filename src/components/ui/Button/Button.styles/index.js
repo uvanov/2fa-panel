@@ -9,7 +9,7 @@ export default styled.button`
   padding: 6px 14px;
   
   cursor: pointer;
-  transition: background-color .2s;
+  transition: background-color .3s, color .3s;
   
   ${props => props.variant === 'blue' && css`
     background: #2D9CDB;
@@ -24,6 +24,16 @@ export default styled.button`
 
     &:hover {
       background: #5bab7c;
+    }
+  `}
+
+  ${props => props.variant === 'red' && css`
+    background: transparent;
+    color: #FF0000;
+
+    &:hover {
+      background: #FF0000;
+      color: white;
     }
   `}
 
