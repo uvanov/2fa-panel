@@ -10,7 +10,8 @@ import {
   MethodHint,
   MethodIconWrapper,
   MethodSelected,
-  MethodTitle, StyledMethod
+  MethodTitle,
+  StyledMethod
 } from './Methods.styles';
 
 const Methods = ({ children }) => {

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { useCode } from '../../../../hooks/useCode';
+import { StepContext } from '../../TwoFactor/TwoFactor';
 import {
   Button,
   Code,
@@ -7,16 +8,18 @@ import {
   Flex,
   Grid,
   Icon,
-  StepHeading, Typography
+  StepHeading,
+  Typography
 } from '../../../ui/ui';
-import { StepContext } from '../../TwoFactor/TwoFactor';
+
+import StyledAdditional from './Additional.styles';
 
 const Additional = () => {
-  const [codeStatus, onCodeChange] = useCode('530962')
+  const [codeStatus, onCodeChange] = useCode('530962');
   const { setStep } = useContext(StepContext);
 
   return (
-    <Flex
+    <StyledAdditional
       direction="column"
       gap={ 16 }
     >
@@ -41,11 +44,12 @@ const Additional = () => {
       </Flex>
       <Flex
         direction="column"
-        align='center'
+        align="center"
         gap={ 6 }
       >
-        <Typography align='center'>
-          В качестве дополнительного способа для получения кодов используется <a href='https://desktop.telegram.org/'>Телеграм</a>.
+        <Typography align="center">
+          В качестве дополнительного способа для получения кодов используется <a
+          href="https://desktop.telegram.org/">Телеграм</a>.
           Если этот способ покажется вам удобным, вы сможете сделать его основым. Откройте Телеграм,
           найдите бота <b>@omnidesk_2fa_bot</b>, отправьте в его адрес следующий набор символов и укажите
           в поле шесть цифр из ответа бота:
@@ -59,7 +63,7 @@ const Additional = () => {
       >
         <div/>
         <Flex
-          justify='center'
+          justify="center"
         >
           <CodeInput
             status={ codeStatus }
@@ -67,8 +71,8 @@ const Additional = () => {
           />
         </Flex>
         <Flex
-          justify='flex-end'
-          align='flex-end'
+          justify="flex-end"
+          align="flex-end"
         >
           <Button
             variant="blue"
@@ -79,7 +83,7 @@ const Additional = () => {
           </Button>
         </Flex>
       </Grid>
-    </Flex>
+    </StyledAdditional>
   );
 };
 

@@ -6,7 +6,7 @@ import {
 } from '../../ui';
 
 export const StyledMethod = styled(Flex)`
-  padding: 10px 0 10px 15px;
+  padding: 10px 15px;
   border-top: 1px solid #E9E9E9;
 
   &:last-child {

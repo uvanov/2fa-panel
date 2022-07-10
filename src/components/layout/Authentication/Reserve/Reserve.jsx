@@ -1,15 +1,17 @@
 import React, { useContext } from 'react';
+import { StepContext } from '../../TwoFactor/TwoFactor';
 import {
-  Button, Code,
+  Button,
+  Code,
   Flex,
   Icon,
   StepHeading,
   Typography
 } from '../../../ui/ui';
 
-import { StepContext } from '../../TwoFactor/TwoFactor';
+
 import {
-  ReserveCodeGrid
+  ReserveCodeGrid, StyledReserve
 } from './Reserve.styles';
 
 import { RESERVE_CODES } from './Reserve.constants';
@@ -27,7 +29,7 @@ const Reserve = () => {
   };
 
   return (
-    <Flex
+    <StyledReserve
       direction="column"
       gap={ 16 }
     >
@@ -94,7 +96,7 @@ const Reserve = () => {
           Продолжить
         </Button>
       </Flex>
-    </Flex>
+    </StyledReserve>
   );
 };
 
