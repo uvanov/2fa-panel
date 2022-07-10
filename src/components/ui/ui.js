@@ -8,6 +8,7 @@ import Divider from './Divider/Divider';
 import StepHeading from './StepHeading/StepHeading';
 import CodeInput from './CodeInput/CodeInput';
 import Code from './Code/Code';
+import Methods from './Methods/Methods';
 
 export {
   Grid,
@@ -19,5 +20,6 @@ export {
   Divider,
   StepHeading,
   CodeInput,
-  Code
+  Code,
+  Methods
 }
