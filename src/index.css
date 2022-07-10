@@ -3,6 +3,11 @@
   src: url("./assets/fonts/FontAwesome.otf");
 }
 
+@font-face {
+  font-family: "FontAwesomeBrands";
+  src: url("./assets/fonts/FontAwesomeBrands.otf");
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen',
