@@ -9,6 +9,7 @@ import StepHeading from './StepHeading/StepHeading';
 import CodeInput from './CodeInput/CodeInput';
 import Code from './Code/Code';
 import Methods from './Methods/Methods';
+import Alert from './Alert/Alert';
 
 export {
   Grid,
@@ -21,5 +22,6 @@ export {
   StepHeading,
   CodeInput,
   Code,
-  Methods
-}
+  Methods,
+  Alert
+};

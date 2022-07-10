@@ -1,21 +1,21 @@
 import React from 'react';
 
+import TwoFactor from '../TwoFactor/TwoFactor';
 import {
   Flex,
-  Typography
+  Typography,
+  Alert
 } from '../../ui/ui';
-import Alert from '../../ui/Alert/Alert';
-import TwoFactor from '../TwoFactor/TwoFactor';
 
 const Content = () => {
   return (
     <Flex
-      direction='column'
+      direction="column"
       gap={ 20 }
     >
       <Alert>
         <Flex
-          direction='column'
+          direction="column"
           gap={ 30 }
         >
           <Typography>
@@ -29,7 +29,7 @@ const Content = () => {
           </Typography>
         </Flex>
       </Alert>
-      <TwoFactor />
+      <TwoFactor/>
     </Flex>
   );
 };
