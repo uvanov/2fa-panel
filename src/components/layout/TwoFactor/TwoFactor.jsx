@@ -17,32 +17,56 @@ const TwoFactor = () => {
   // connecting - подключение,
   // reserve - резервные коды,
   // additional - дополнительный способ
+  // enabled - включена
   const [step, setStep] = useState('disabled');
 
   return (
     <>
       <StyledTwoFactor>
         <Flex justify="space-between">
-          <Flex gap={ 5 }>
-            <Icon icon="" color="#EB5757"/>
+          <Flex
+            align='center'
+            gap={ 5 }
+          >
+            {
+              step === 'enabled'
+                ? <Icon icon="" color="#6FCF97"/>
+                : <Icon icon="" color="#EB5757"/>
+            }
             <Typography bold>
-              Двухфакторная аутентификация отключена
+              Двухфакторная аутентификация { step === 'enabled' ? 'включена' : 'отключена' }
             </Typography>
           </Flex>
-          <Button
-            variant="green"
-            disabled={ step !== 'disabled' }
-            onClick={ () => setStep('connecting') }
-          >
-            Настроить
-          </Button>
+          {
+            step === 'enabled'
+              ? (
+                <Button
+                  variant="red"
+                  onClick={ () => setStep('disabled') }
+                >
+                  отключить
+                </Button>
+              )
+              : (
+                <Button
+                  variant="green"
+                  disabled={ step !== 'disabled' }
+                  onClick={ () => setStep('connecting') }
+                >
+                  Настроить
+                </Button>
+              )
+          }
         </Flex>
       </StyledTwoFactor>
-
-      <StepContext.Provider value={{ step, setStep }}>
-        <Authentication />
+      {
+        step === 'disabled' && (
+          <Divider/>
+        )
+      }
+      <StepContext.Provider value={ { step, setStep } }>
+        <Authentication/>
       </StepContext.Provider>
-      <Divider/>
     </>
   );
 };
