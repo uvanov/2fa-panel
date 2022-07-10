@@ -7,6 +7,7 @@ import Button from './Button/Button';
 import Divider from './Divider/Divider';
 import StepHeading from './StepHeading/StepHeading';
 import CodeInput from './CodeInput/CodeInput';
+import Code from './Code/Code';
 
 export {
   Grid,
@@ -17,5 +18,6 @@ export {
   Button,
   Divider,
   StepHeading,
-  CodeInput
+  CodeInput,
+  Code
 }

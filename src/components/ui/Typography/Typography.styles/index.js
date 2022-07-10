@@ -8,4 +8,8 @@ export default styled.p`
   ${ props => props.bold && css`
     font-weight: bold;
   ` }
+
+  ${ props => props.align && css`
+    text-align: ${props.align};
+  ` }
 `;
