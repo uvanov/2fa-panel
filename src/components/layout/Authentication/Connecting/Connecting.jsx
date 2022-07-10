@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { useCode } from '../../../../hooks/useCode';
+import { StepContext } from '../../TwoFactor/TwoFactor';
 import {
   Button,
   Flex,
@@ -7,9 +8,11 @@ import {
   Typography,
   CodeInput
 } from '../../../ui/ui';
-import { StepContext } from '../../TwoFactor/TwoFactor';
 
-import { QRCodeImage } from './Connecting.styles';
+import {
+  StyledConnecting,
+  QRCodeImage
+} from './Connecting.styles';
 
 import QRCodeSource from '../../../../assets/images/qr-code.png';
 
@@ -17,9 +20,8 @@ const Connecting = () => {
   const [codeStatus, onCodeChange] = useCode('234567');
   const { setStep } = useContext(StepContext);
 
-
   return (
-    <Flex
+    <StyledConnecting
       direction="column"
       gap={ 16 }
     >
@@ -59,7 +61,7 @@ const Connecting = () => {
           Продолжить
         </Button>
       </Flex>
-    </Flex>
+    </StyledConnecting>
   );
 };
 
