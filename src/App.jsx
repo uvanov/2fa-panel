@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Header from './components/layout/Header/Header';
 import Sidebar from './components/layout/Sidebar/Sidebar';
@@ -8,6 +8,12 @@ import Content from './components/layout/Content/Content';
 import StyledApplicationGrid from './App.styles';
 
 const App = () => {
+
+  useEffect(() => {
+    console.clear();
+    console.log('Developed by uvanov ( github.com/uvanov )')
+  }, [])
+
   return (
     <>
       <Header/>
