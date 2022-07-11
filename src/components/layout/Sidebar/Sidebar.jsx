@@ -31,6 +31,7 @@ const Sidebar = () => {
         {
           SIDEBAR_ITEMS.map(item => (
             <SidebarItem
+              key={ item.value }
               icon={ item.icon }
               text={ item.text }
               selected={ selected === item.value }
