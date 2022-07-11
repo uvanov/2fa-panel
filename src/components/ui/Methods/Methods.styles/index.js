@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 import {
   Flex,
-  Icon,
   Typography
 } from '../../ui';
 

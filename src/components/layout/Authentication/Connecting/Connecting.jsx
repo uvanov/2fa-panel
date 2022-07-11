@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useCode } from '../../../../hooks/useCode';
 import { StepContext } from '../../TwoFactor/TwoFactor';
 import {

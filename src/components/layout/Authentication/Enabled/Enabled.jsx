@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 
 import { StepContext } from '../../TwoFactor/TwoFactor';
 
-import { Flex, Icon, Typography } from '../../../ui/ui';
 import Methods from '../../../ui/Methods/Methods';
 
 const Enabled = () => {
@@ -21,7 +20,7 @@ const Enabled = () => {
           onSelect={ () => setSelectedMethod('application') }
         >
           <a
-            href='#'
+            href='#reserve'
             onClick={ () => setStep('reserve') }
           >
             резервные коды доступа
@@ -37,7 +36,7 @@ const Enabled = () => {
         >
           Вы привязали Телеграм-аккаунт @serj_preobraj,
           <a
-            href='#'
+            href='#connect'
             onClick={ () => setStep('additional') }
           >
              привязать другой аккаунт

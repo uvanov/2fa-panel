@@ -4,8 +4,7 @@ import StyledHeader from './Header.styles';
 import Navigation from '../Navigation/Navigation';
 import Container from '../Container/Container';
 import {
-  Flex,
-  IconButton
+  Flex
 } from '../../ui/ui';
 import Toolbar from '../Toolbar/Toolbar';
 

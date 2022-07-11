@@ -3,8 +3,7 @@ import React from 'react';
 import TwoFactor from '../TwoFactor/TwoFactor';
 import {
   Flex,
-  Typography,
-  Alert
+  Typography
 } from '../../ui/ui';
 
 import {
@@ -30,7 +29,7 @@ const Content = () => {
             что значительно надёжнее классической парольной системы.
           </Typography>
           <Typography>
-            Подробнее о настройках этого подраздела <a href="#">читайте в нашей базе знаний</a>.
+            Подробнее о настройках этого подраздела <a href="#knowledge">читайте в нашей базе знаний</a>.
           </Typography>
         </Flex>
       </ContentAlert>

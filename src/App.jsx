@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Grid } from './components/ui/ui';
-
 import Header from './components/layout/Header/Header';
 import Sidebar from './components/layout/Sidebar/Sidebar';
 import Container from './components/layout/Container/Container';
